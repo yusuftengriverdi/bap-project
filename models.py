@@ -376,7 +376,7 @@ def resnet50(input_shape=(64, 64, 3), number_of_classes=2, include_top=True, glo
 
 
 def deeplabv3plus(input_shape=(64, 64, 3), number_of_classes=2, include_top=True):
-    """Forked Deep Lab V3+ by __insert reference here__ """
+    """Forked from https://github.com/PreetKumarBAU/Chagas-Segmentation-Models """
 
     # Input
     img_input = Input(input_shape)
@@ -433,6 +433,7 @@ def deeplabv3plus(input_shape=(64, 64, 3), number_of_classes=2, include_top=True
 
 
 def nasnet_mobile(input_shape=(64, 64, 3), number_of_classes=2, include_top=True):
+    """Forked from https://github.com/PreetKumarBAU/Chagas-Segmentation-Models """
     base_model = NASNetMobile(input_shape=input_shape,
                               include_top=False,
                               weights=None,
@@ -486,6 +487,7 @@ def inception_resnetv2(input_shape=(64, 64, 3), number_of_classes=2, include_top
 
 
 def double_unet(input_shape=(64, 64, 3), number_of_classes=2, include_top=True):
+    """Forked from https://github.com/PreetKumarBAU/Chagas-Segmentation-Models """
     img_input = Input(input_shape)
     x, skip_1 = encoder1(img_input)
     x = ASPP_v2(x, 64)
